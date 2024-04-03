@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-ROCK-PAPER-SCISSOR</title>
+    <link rel="stylesheet" href="/css files/06-RPS css auto.css">
+
+</head>
+
+<body>
+    <!--Rock Paper Scissor-->
+<div class="main-board">
+    <div class="head-2"><p class="head-1"> Rock Paper Scissor </p><p>AI version</p></div>
+    <div class="inlet">
+ <div class="button1">
+    <button class="rock" onclick="
+    playmove('rock',compmove=rockpapersc()) 
+    match()
+    "><img class="imgg" src="rock-emoji.png"></button>
+
+    <button class="paper" onclick="
+    playmove('paper',compmove=rockpapersc())
+    match()
+    "><img class="imgg" src="paper-emoji.png"></button>
+
+    <button class="scissor" onclick="
+    playmove('scissors',compmove=rockpapersc())
+    match()
+    "><img class="imgg" src="scissors-emoji.png"></button>
+ </div>
+    
+    <div class="main-board1">
+    <p>Score Details:</p>
+    <p class="match"></p>
+    <div class="main-board2"><p class='pp'>SCORE:</p><p class="Score"></p></div>
+    <p class="Choice"></p>
+    </div>
+    <div class="main-board"><p class="Score2"></p></div>
+    <button  class="reset" onclick="
+    score.wins=0,score.losses=0,score.tie=0
+    localStorage.removeItem('score')
+    updatescore()
+    ">Reset</button>
+    <button class="reset1" onclick="
+        autoPlay()
+    ">GPT</button>
+    </div>
+</div>
+    <script src="js files/06-RPS css auto.js"></script>
+</body>
+
+</html>
